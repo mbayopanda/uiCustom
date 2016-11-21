@@ -1,0 +1,19 @@
+{
+  "name": "bootstrap-aze",
+  "authors": [
+    "Bruce Mbayo <mbayopanda@gmail.com>"
+  ],
+  "description": "bootstrap theme for accounting-ez",
+  "main": "index.html",
+  "keywords": [
+    "bootstrap",
+    "theme",
+    "accounting-ez"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2"
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Accounting EZ theme</title>
+
+    <!--animate css -->
+    <link href="./animate/animate.css" rel="stylesheet">
+
+    <!--flexbox grid -->
+    <link href="./flexboxgrid/flexboxgrid.css" rel="stylesheet">
+
+    <!-- blueprint theme core CSS -->
+    <link href="./blueprint/theme.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid" ng-controller="MainController as $ctrl">
+
+      <div class="row">
+        <div class="col-xs" style="background-color: #669EFF;" ng-repeat="item in $ctrl.people">
+          <span ng-click="$ctrl.show(item)">{{ item.name }}</span> ({{ item.age }})
+        </div>
+      </div>
+
+    </div>
+
+    <!-- angular libs  -->
+    <script src="angular-ui/angular.min.js" charset="utf-8"></script>
+    <script src="angular-ui/ui-bootstrap-tpls.js" charset="utf-8"></script>
+    <script src="./angular-ui/custom.js" charset="utf-8"></script>
+  </body>
+</html>

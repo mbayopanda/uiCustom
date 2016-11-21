@@ -1,0 +1,16 @@
+<div class="ui-dialog">
+  <div class="ui-dialog-header">
+    <span class="ui-icon-large ui-icon-inbox"></span>
+    <h5>Dialog Header</h5>
+    <button aria-label="Close" class="ui-dialog-close-button ui-icon-small-cross" ng-click="$ctrl.close()"></button>
+  </div>
+  <div class="ui-dialog-body">
+    Bonjour les amis, c'est {{ $ctrl.person.name }} ({{ $ctrl.person.age }})
+  </div>
+  <div class="ui-dialog-footer">
+    <div class="ui-dialog-footer-actions">
+      <button type="button" class="ui-button" ng-click="$ctrl.close()">Close</button>
+      <button type="submit" class="ui-button ui-intent-primary">Submit</button>
+    </div>
+  </div>
+</div>
