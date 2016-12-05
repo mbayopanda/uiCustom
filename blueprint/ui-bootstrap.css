@@ -1,0 +1,21 @@
+/*
+    ui bootstrap style 
+*/
+
+.ui-list-select {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ced9e0;
+}
+.ui-list-select > li {
+    padding: 5px;
+    cursor: pointer;
+}
+.ui-list-select > li:last-child {
+    border-bottom: 0px;
+}
+.ui-list-select > li:hover,
+.ui-list-select > li.active {
+    background-color: #F5F8FA;
+}

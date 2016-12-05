@@ -4155,7 +4155,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.stackedMap', 'ui.bootstrap.p
               ariaHiddenCount = parseInt(sibling.getAttribute(ARIA_HIDDEN_ATTRIBUTE_NAME), 10);
 
             if (!ariaHiddenCount) {
-              ariaHiddenCount = elemIsAlreadyHidden ? 1 : 0;
+              ariaHiddenCount = elemIsAlreadyHidden ? 1 : 0;  
             }
 
             sibling.setAttribute(ARIA_HIDDEN_ATTRIBUTE_NAME, ariaHiddenCount + 1);
@@ -4193,7 +4193,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.stackedMap', 'ui.bootstrap.p
           }
         );
       }
-
+      
       $modalStack.close = function(modalInstance, result) {
         var modalWindow = openedWindows.get(modalInstance);
         unhideBackgroundElements();
@@ -7171,6 +7171,7 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.debounce', 'ui.bootstrap
         position: '&',
         moveInProgress: '=',
         select: '&',
+        open: '&',
         assignIsOpen: '&',
         debounce: '&'
       },
@@ -7185,6 +7186,11 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.debounce', 'ui.bootstrap
           var isDropdownOpen = scope.matches.length > 0;
           scope.assignIsOpen({ isOpen: isDropdownOpen });
           return isDropdownOpen;
+        };
+
+        // this is a hack : open the list on a click
+        scope.open = function () {
+          scope.assignIsOpen({ isOpen: true });
         };
 
         scope.isActive = function(matchIdx) {
@@ -7428,8 +7434,7 @@ angular.module("uib/template/datepickerPopup/popup.html", []).run(["$templateCac
 
 angular.module("uib/template/modal/window.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("uib/template/modal/window.html",
-    "<div class=\"animated fadeIn ui-overlay-backdrop\" tabindex=\"0\"></div>" + 
-    "<div class=\"{{size ? 'modal-' + size : ''}}\"><div class=\"modal-content\" uib-modal-transclude></div></div>\n" +
+    "<div class=\"modal-dialog {{size ? 'modal-' + size : ''}}\"><div class=\"modal-content\" uib-modal-transclude></div></div>\n" +
     "");
 }]);
 
@@ -7609,7 +7614,7 @@ angular.module("uib/template/typeahead/typeahead-match.html", []).run(["$templat
 
 angular.module("uib/template/typeahead/typeahead-popup.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("uib/template/typeahead/typeahead-popup.html",
-    "<ul class=\"dropdown-menu\" ng-show=\"isOpen() && !moveInProgress\" ng-style=\"{top: position().top+'px', left: position().left+'px'}\" role=\"listbox\" aria-hidden=\"{{!isOpen()}}\">\n" +
+    "<ul class=\"ui-list-select\" ng-click=\"open()\" ng-show=\"isOpen() && !moveInProgress\" ng-style=\"{top: position().top+'px', left: position().left+'px'}\" role=\"listbox\" aria-hidden=\"{{!isOpen()}}\">\n" +
     "    <li class=\"uib-typeahead-match\" ng-repeat=\"match in matches track by $index\" ng-class=\"{active: isActive($index) }\" ng-mouseenter=\"selectActive($index)\" ng-click=\"selectMatch($index, $event)\" role=\"option\" id=\"{{::match.id}}\">\n" +
     "        <div uib-typeahead-match index=\"$index\" match=\"match\" query=\"query\" template-url=\"templateUrl\"></div>\n" +
     "    </li>\n" +

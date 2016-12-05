@@ -24,17 +24,24 @@ function MainController(Modal) {
   // show modal  
   vm.show = function show(item) {
     Modal.open({
-      animation: true,
       ariaLabelledBy: 'ui-dialog-title',
       ariaDescribedBy: 'ui-dialog-body',
       templateUrl: './angular-ui/sample-modal.html',
       controller: 'ModalController',
       controllerAs: '$ctrl',
+      size: 'lg',
       resolve: { 
         Item : function () { return item; }
       }
     });
   }
+
+  // tabs 
+  vm.tabs = [
+    { title:'Dynamic Title 1', content:'Dynamic content 1' },
+    { title:'Dynamic Title 2', content:'Dynamic content 2' },
+    { title:'Dynamic Title 3', content:'Dynamic content 3' }
+  ];
 }
 
 // modal controller 
@@ -44,7 +51,6 @@ ModalController.$inject = ['$uibModalInstance', 'Item'];
 
 function ModalController(Instance, Item) {
   var vm = this;
-
   vm.person = Item;
   vm.close  = Instance.close;
 }

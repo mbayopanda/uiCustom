@@ -1,0 +1,243 @@
+/* 
+Gray scale
+
+Black, white and everything in between. The gray scale should be used for the main UI frame: containers, headers, sections, boxes, etc.
+*/
+
+
+.black { color:  #10161a; }
+
+.dark-gray1 { color:  #182026; }
+.dark-gray2 { color:  #202b33; }
+.dark-gray3 { color:  #293742; }
+.dark-gray4 { color:  #30404d; }
+.dark-gray5 { color:  #394b59; }
+
+.gray1 { color:  #5c7080; }
+.gray2 { color:  #738694; }
+.gray3 { color:  #8a9ba8; }
+.gray4 { color:  #a7b6c2; }
+.gray5 { color:  #bfccd6; }
+
+.light-gray1 { color:  #ced9e0; }
+.light-gray2 { color:  #d8e1e8; }
+.light-gray3 { color:  #e1e8ed; }
+.light-gray4 { color:  #ebf1f5; }
+.light-gray5 { color:  #f5f8fa; }
+
+.white { color:  #ffffff; }
+
+.bg-black { background-color:  #10161a; }
+
+.bg-dark-gray1 { background-color:  #182026; }
+.bg-dark-gray2 { background-color:  #202b33; }
+.bg-dark-gray3 { background-color:  #293742; }
+.bg-dark-gray4 { background-color:  #30404d; }
+.bg-dark-gray5 { background-color:  #394b59; }
+
+.bg-gray1 { background-color:  #5c7080; }
+.bg-gray2 { background-color:  #738694; }
+.bg-gray3 { background-color:  #8a9ba8; }
+.bg-gray4 { background-color:  #a7b6c2; }
+.bg-gray5 { background-color:  #bfccd6; }
+
+.bg-light-gray1 { background-color:  #ced9e0; }
+.bg-light-gray2 { background-color:  #d8e1e8; }
+.bg-light-gray3 { background-color:  #e1e8ed; }
+.bg-light-gray4 { background-color:  #ebf1f5; }
+.bg-light-gray5 { background-color:  #f5f8fa; }
+
+.bg-white { background-color:  #ffffff; }
+
+/* 
+Core colors
+
+Core colors are reserved for user interface design. Use these to help call attention to specific UI elements, such as buttons, callouts, icons, etc. Each core color is mapped to what we call a visual intent. We use intents to convey the status of UI elements:
+
+Blue (intent: primary) elevates elements from the typical gray scale UI frame.
+Green (intent: success) indicates successful operations.
+Orange (intent: warning) indicates warnings and intermediate states.
+Red (intent: danger) indicates errors and potentially destructive operations.
+Core colors are also designed to:
+
+go well together and be used alongside each other in any application.
+adhere to WCAG 2.0 standards, and therefore are highly accessible to visually impaired and color blind users.
+*/
+
+.blue1 { color:  #0e5a8a; }
+.blue2 { color:  #106ba3; }
+.blue3 { color:  #137cbd; }
+.blue4 { color:  #2b95d6; }
+.blue5 { color:  #48aff0; }
+
+.green1 { color:  #0a6640; }
+.green2 { color:  #0d8050; }
+.green3 { color:  #0f9960; }
+.green4 { color:  #15b371; }
+.green5 { color:  #3dcc91; }
+
+.orange1 { color:  #a66321; }
+.orange2 { color:  #bf7326; }
+.orange3 { color:  #d9822b; }
+.orange4 { color:  #f29d49; }
+.orange5 { color:  #ffb366; }
+
+.red1 { color:  #a82a2a; }
+.red2 { color:  #c23030; }
+.red3 { color:  #db3737; }
+.red4 { color:  #f55656; }
+.red5 { color:  #ff7373; }
+
+.bg-blue1 { background-color:  #0e5a8a; }
+.bg-blue2 { background-color:  #106ba3; }
+.bg-blue3 { background-color:  #137cbd; }
+.bg-blue4 { background-color:  #2b95d6; }
+.bg-blue5 { background-color:  #48aff0; }
+
+.bg-green1 { background-color:  #0a6640; }
+.bg-green2 { background-color:  #0d8050; }
+.bg-green3 { background-color:  #0f9960; }
+.bg-green4 { background-color:  #15b371; }
+.bg-green5 { background-color:  #3dcc91; }
+
+.bg-orange1 { background-color:  #a66321; }
+.bg-orange2 { background-color:  #bf7326; }
+.bg-orange3 { background-color:  #d9822b; }
+.bg-orange4 { background-color:  #f29d49; }
+.bg-orange5 { background-color:  #ffb366; }
+
+.bg-red1 { background-color:  #a82a2a; }
+.bg-red2 { background-color:  #c23030; }
+.bg-red3 { background-color:  #db3737; }
+.bg-red4 { background-color:  #f55656; }
+.bg-red5 { background-color:  #ff7373; }
+
+/*
+Extended colors
+
+Extended colors should typically be reserved for data visualizations { color:  any time
+you need to represent data of some sort, you can use these.
+These colors are less strict on [WCAG 2.0](https { color: //www.w3.org/TR/WCAG20/)
+accessibility standards and should therefore not be used for typical user
+interface design — take a look at [core colors](#colors.core) instead.
+*/
+
+.vermilion1 { color:  #9e2b0e; }
+.vermilion2 { color:  #b83211; }
+.vermilion3 { color:  #d13913; }
+.vermilion4 { color:  #eb532d; }
+.vermilion5 { color:  #ff6e4a; }
+
+.rose1 { color:  #a82255; }
+.rose2 { color:  #c22762; }
+.rose3 { color:  #db2c6f; }
+.rose4 { color:  #f5498b; }
+.rose5 { color:  #ff66a1; }
+
+.violet1 { color:  #5c255c; }
+.violet2 { color:  #752f75; }
+.violet3 { color:  #8f398f; }
+.violet4 { color:  #a854a8; }
+.violet5 { color:  #c274c2; }
+
+.indigo1 { color:  #5642a6; }
+.indigo2 { color:  #634dbf; }
+.indigo3 { color:  #7157d9; }
+.indigo4 { color:  #9179f2; }
+.indigo5 { color:  #ad99ff; }
+
+.cobalt1 { color:  #1f4b99; }
+.cobalt2 { color:  #2458b3; }
+.cobalt3 { color:  #2965cc; }
+.cobalt4 { color:  #4580e6; }
+.cobalt5 { color:  #669eff; }
+
+.turquoise1 { color:  #008075; }
+.turquoise2 { color:  #00998c; }
+.turquoise3 { color:  #00b3a4; }
+.turquoise4 { color:  #14ccbd; }
+.turquoise5 { color:  #2ee6d6; }
+
+.forest1 { color:  #1d7324; }
+.forest2 { color:  #238c2c; }
+.forest3 { color:  #29a634; }
+.forest4 { color:  #43bf4d; }
+.forest5 { color:  #62d96b; }
+
+.lime1 { color:  #728c23; }
+.lime2 { color:  #87a629; }
+.lime3 { color:  #9bbf30; }
+.lime4 { color:  #b6d94c; }
+.lime5 { color:  #d1f26d; }
+
+.gold1 { color:  #a67908; }
+.gold2 { color:  #bf8c0a; }
+.gold3 { color:  #d99e0b; }
+.gold4 { color:  #f2b824; }
+.gold5 { color:  #ffc940; }
+
+.sepia1 { color:  #63411e; }
+.sepia2 { color:  #7d5125; }
+.sepia3 { color:  #96622d; }
+.sepia4 { color:  #b07b46; }
+.sepia5 { color:  #c99765; }
+
+.bg-vermilion1 { background-color:  #9e2b0e; }
+.bg-vermilion2 { background-color:  #b83211; }
+.bg-vermilion3 { background-color:  #d13913; }
+.bg-vermilion4 { background-color:  #eb532d; }
+.bg-vermilion5 { background-color:  #ff6e4a; }
+
+.bg-rose1 { background-color:  #a82255; }
+.bg-rose2 { background-color:  #c22762; }
+.bg-rose3 { background-color:  #db2c6f; }
+.bg-rose4 { background-color:  #f5498b; }
+.bg-rose5 { background-color:  #ff66a1; }
+
+.bg-violet1 { background-color:  #5c255c; }
+.bg-violet2 { background-color:  #752f75; }
+.bg-violet3 { background-color:  #8f398f; }
+.bg-violet4 { background-color:  #a854a8; }
+.bg-violet5 { background-color:  #c274c2; }
+
+.bg-indigo1 { background-color:  #5642a6; }
+.bg-indigo2 { background-color:  #634dbf; }
+.bg-indigo3 { background-color:  #7157d9; }
+.bg-indigo4 { background-color:  #9179f2; }
+.bg-indigo5 { background-color:  #ad99ff; }
+
+.bg-cobalt1 { background-color:  #1f4b99; }
+.bg-cobalt2 { background-color:  #2458b3; }
+.bg-cobalt3 { background-color:  #2965cc; }
+.bg-cobalt4 { background-color:  #4580e6; }
+.bg-cobalt5 { background-color:  #669eff; }
+
+.bg-turquoise1 { background-color:  #008075; }
+.bg-turquoise2 { background-color:  #00998c; }
+.bg-turquoise3 { background-color:  #00b3a4; }
+.bg-turquoise4 { background-color:  #14ccbd; }
+.bg-turquoise5 { background-color:  #2ee6d6; }
+
+.bg-forest1 { background-color:  #1d7324; }
+.bg-forest2 { background-color:  #238c2c; }
+.bg-forest3 { background-color:  #29a634; }
+.bg-forest4 { background-color:  #43bf4d; }
+.bg-forest5 { background-color:  #62d96b; }
+
+.bg-lime1 { background-color:  #728c23; }
+.bg-lime2 { background-color:  #87a629; }
+.bg-lime3 { background-color:  #9bbf30; }
+.bg-lime4 { background-color:  #b6d94c; }
+.bg-lime5 { background-color:  #d1f26d; }
+
+.bg-gold1 { background-color:  #a67908; }
+.bg-gold2 { background-color:  #bf8c0a; }
+.bg-gold3 { background-color:  #d99e0b; }
+.bg-gold4 { background-color:  #f2b824; }
+.bg-gold5 { background-color:  #ffc940; }
+
+.bg-sepia1 { background-color:  #63411e; }
+.bg-sepia2 { background-color:  #7d5125; }
+.bg-sepia3 { background-color:  #96622d; }
+.bg-sepia4 { background-color:  #b07b46; }
+.bg-sepia5 { background-color:  #c99765; }

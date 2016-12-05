@@ -10,7 +10,13 @@
     <title>Accounting EZ theme</title>
 
     <!--animate css -->
+    <link href="./dist/css/aze.css" rel="stylesheet">
+
+    <!--animate css -->
     <link href="./animate/animate.css" rel="stylesheet">
+
+    <!--colorize css -->
+    <link href="./colorize/colorize.css" rel="stylesheet">
 
     <!--flexbox grid -->
     <link href="./flexboxgrid/flexboxgrid.css" rel="stylesheet">
@@ -18,14 +24,58 @@
     <!-- blueprint theme core CSS -->
     <link href="./blueprint/theme.css" rel="stylesheet">
 
+    <!-- blueprint angular tool theme core CSS -->
+    <link href="./blueprint/ui-bootstrap.css" rel="stylesheet">
+
   </head>
   <body>
 
     <div class="container-fluid" ng-controller="MainController as $ctrl">
 
       <div class="row">
-        <div class="col-xs" style="background-color: #669EFF;" ng-repeat="item in $ctrl.people">
+        <div class="col-xs bg-gray5" style="padding: 10px;" ng-repeat="item in $ctrl.people">
           <span ng-click="$ctrl.show(item)">{{ item.name }}</span> ({{ item.age }})
+        </div>
+      </div>
+
+      <!--Typeahead -->
+      <div class="row">
+        <div class="col-xs">
+          <label class="ui-label">
+            Developer Name
+            <div class="ui-input-group">
+              <span class="ui-icon ui-icon-person"></span>
+              <input 
+                class="ui-input" 
+                style="" 
+                type="text" 
+                placeholder="Enter developer name..." 
+                ng-model="$ctrl.developer"
+                uib-typeahead="person as person.name + ' ' + person.age for person in $ctrl.people | filter:$viewValue | limitTo:5" 
+                dir="auto" />
+              <button class="ui-button ui-minimal ui-intent-primary ui-icon-add"
+                title="Add a developper"
+                ng-click="$ctrl.show()"></button>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!--tabs component -->
+      <div class="row">
+        <div class="col-xs">
+          <uib-tabset>
+            <uib-tab index="0" heading="Static title">Static content</uib-tab>
+            <uib-tab index="$index + 1" ng-repeat="tab in $ctrl.tabs" heading="{{tab.title}}" disable="tab.disabled">
+              {{tab.content}}
+            </uib-tab>
+            <uib-tab index="4" select="alertMe()">
+              <uib-tab-heading>
+                <span class="ui-icon ui-icon-help"></span> Alert!
+              </uib-tab-heading>
+              I've got an HTML heading, and a select callback. Pretty cool!
+            </uib-tab>
+          </uib-tabset>
         </div>
       </div>
 
